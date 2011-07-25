@@ -73,3 +73,18 @@ stylesheets using vanilla CSS anymore -- seriously, who wants to work in
 "language" that doesn't support variables? If you're using Mac OS X for
 development, make sure to check out [incident57's
 Less.app](http://incident57.com/less/).
+
+
+Why should I use this?
+----------------------
+
+Everything I've learned from writing and maintaining the [Flask
+Engine](https://github.com/zachwill/flask-engine) template for Google
+App Engine has made its way into this repo, too. The goal is to make a
+simple repo that can be cloned and added to for the majority of projects
+going forward, while also staying minimal in size and complexity.
+
+As an added bonus, while this repo does cater to DotCloud's hosting
+service, the `bootstrap.py` file was created to help others clone this
+repo and use Flask with other hosting providers (such as Amazon and
+Rackspace).

@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 """
-Bootstrap and serve your application.
+Bootstrap and serve your application. This file also serves to not make your
+application completely reliant upon DotCloud's hosting service.
 
 If you're in a development environment, envoke the script with:
     $ python bootstrap.py --dev
