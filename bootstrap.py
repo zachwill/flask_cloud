@@ -34,6 +34,7 @@ def serve_app(gevent_environment):
     app = create_app()
     if gevent_environment:
         from gevent.wsgi import WSGIServer
+        # The port should probably be set to 80.
         http_server = WSGIServer(('', 5000), app)
         http_server.serve_forever()
     else:

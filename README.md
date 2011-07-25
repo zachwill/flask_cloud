@@ -125,8 +125,8 @@ This should return a URL, and you can then view your application in
 your web browser of choice.
 
 
-Adding to `requirements.txt`
-----------------------------
+Adding Requirements
+-------------------
 
 In the course of creating your application, you may find yourself
 installing various Python modules with `pip` -- in which case you'll
@@ -154,3 +154,12 @@ We'll first setup our isolated environment like before:
 You then should have no problem installing the packages.
 
     $ pip install -r requirements.txt
+
+The idea then is that your application could be served with `gevent` by
+envoking the `bootstrap.py` file like so:
+
+    $ python bootstrap.py --gevent
+
+This is more of a general idea than a working implementation currently
+-- I'm sure you'd want to put `nginx` in front of your configuration to
+serve up static files and media.
