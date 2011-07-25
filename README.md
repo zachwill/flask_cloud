@@ -88,3 +88,69 @@ As an added bonus, while this repo does cater to DotCloud's hosting
 service, the `bootstrap.py` file was created to help others clone this
 repo and use Flask with other hosting providers (such as Amazon and
 Rackspace).
+
+
+Instructions
+------------
+
+First, you'll need to clone the repo.
+
+    $ git clone git@github.com:zachwill/flask-cloud.git
+    $ cd flask-cloud
+
+Second, let's setup an isolated environment with `virtualenv` and `pip`
+-- which you can install with the following.
+
+    $ sudo easy_install pip
+    $ pip install virtualenv
+    $ virtualenv --no-site-packages env
+    $ source env/bin/activate
+
+Then, let's get the requirements installed in your isolated test
+environment.
+
+    $ pip install -r requirements.txt
+
+Now, you can run the application locally.
+
+    $ python bootstrap.py
+
+To upload your application to DotCloud, you'll first need to do the
+following:
+
+    $ dotcloud create <my_application_name>
+    $ dotcloud push <my_application_name> .
+
+This should return a URL, and you can then view your application in
+your web browser of choice.
+
+
+Adding to `requirements.txt`
+----------------------------
+
+In the course of creating your application, you may find yourself
+installing various Python modules with `pip` -- in which case you'll
+need to update the `requirements.txt` file. One way that this can be
+done is with `pip freeze`.
+
+    $ pip freeze > requirements.txt
+
+
+Other Hosting Environments
+--------------------------
+
+In case you're wanting to host your application on another environment
+(the use case I'm imagining currently is Amazon's AWS), you could always
+install `pip` and then uncomment `gevent` from the `requirements.txt`
+file (or whatever server you plan on using).
+
+We'll first setup our isolated environment like before:
+
+    $ sudo easy_install pip
+    $ pip install virtualenv
+    $ virtualenv --no-site-packages env
+    $ source env/bin/activate
+
+You then should have no problem installing the packages.
+
+    $ pip install -r requirements.txt

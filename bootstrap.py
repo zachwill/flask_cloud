@@ -14,30 +14,30 @@ Python library:
 """
 
 import argparse
-from gevent.wsgi import WSGIServer
 from app import create_app
 
 
 def parse_arguments():
     """Parse any additional arguments that may be passed to `bootstrap.py`."""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dev', action='store_true',
-                        help="Turn Flask's development server on.")
+    parser.add_argument('--gevent', action='store_true',
+                        help="Run gevent's production server.")
     args = parser.parse_args()
-    return args.dev
+    return args.gevent
 
 
-def serve_app(dev_environment):
+def serve_app(gevent_environment):
     """
     Serve your application. If `dev_environment` is true, then the
-    application will be served using Flask's development server.
+    application will be served using gevent's WSGIServer.
     """
     app = create_app()
-    if dev_environment:
-        app.run(debug=True)
-    else:
+    if gevent_environment:
+        from gevent.wsgi import WSGIServer
         http_server = WSGIServer(('', 5000), app)
         http_server.serve_forever()
+    else:
+        app.run(debug=True)
 
 
 def main():
