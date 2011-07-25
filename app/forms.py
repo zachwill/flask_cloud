@@ -6,13 +6,11 @@ Flask-WTF Documentation:  http://packages.python.org/Flask-WTF/
 Forms for your application can be stored in this file.
 """
 
-from flaskext.wtf import Form, SelectField, SubmitField, TextField, Required
+from flaskext.wtf import Form, SubmitField, TextField, Required, Email
 
-class EpaForm(Form):
-    """Form for querying the EPA APIs."""
-    location = TextField('Location', validators=[Required()])
+class ExampleForm(Form):
+    """Just a simple example form."""
+    name = TextField('Name', validators=[Required()])
+    email = TextField('Email', validators=[Email()])
+    location = TextField('Location')
     submit = SubmitField('Submit')
-    q = SelectField(choices=[
-        ('pcs', "Which facilities can pollute public water sources?"),
-        ('radinfo', "Where's the closest radiation facility?"),
-    ])
