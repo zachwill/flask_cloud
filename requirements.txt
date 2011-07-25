@@ -1,3 +1,2 @@
 flask==0.7.2
 flask-wtf==0.5.2
-gevent==0.13.6

@@ -24,10 +24,17 @@ def parse_arguments():
     return args.dev
 
 
-if __name__ == '__main__':
+def application():
+    """A callable for DotCloud to serve your application."""
+    app = create_app()
+    return app
+
+
+def main():
     dev_environment = parse_arguments()
     app = create_app()
     if dev_environment:
         app.run(debug=True)
-    else:
-        application = app
+
+if __name__ == '__main__':
+    main()
