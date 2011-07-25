@@ -124,6 +124,11 @@ following:
 This should return a URL, and you can then view your application in
 your web browser of choice.
 
+And, to deactivate `virtualenv` (once you've finished coding), you
+simply run the following command:
+
+    $ deactivate
+
 
 Adding Requirements
 -------------------
