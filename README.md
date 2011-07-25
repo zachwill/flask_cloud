@@ -165,6 +165,6 @@ envoking the `bootstrap.py` file like so:
 
     $ python bootstrap.py --gevent
 
-This is more of a general idea than a working implementation currently
+Currently, this is more of a general idea than a working implementation
 -- I'm sure you'd want to put `nginx` in front of your configuration to
 serve up static files and media.
