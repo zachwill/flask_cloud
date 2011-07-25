@@ -5,11 +5,11 @@ Bootstrap and serve your application. This file also serves to not make your
 application completely reliant upon DotCloud's hosting service.
 
 If you're in a development environment, envoke the script with:
-    $ python bootstrap.py --dev
+    $ python bootstrap.py
 
 In a production environment, your application can be run with the `gevent`
 Python library:
-    $ python bootstrap.py
+    $ python bootstrap.py --gevent
 
 """
 
