@@ -5,7 +5,7 @@ a:hover{text-decoration:underline;}
 ul{list-style:none;}
 body{color:#444;}
 header{display:block;margin-bottom:100px;}header ul{border-bottom:1px solid #eee;margin:0 auto;padding:10px 0;width:80%;}
-header li{float:right;padding-top:28px;}
+header li{float:right;padding-top:24px;}
 header li.float_left{float:left;padding-top:10px;}header li.float_left a{background:url('/static/img/yourlogo.png') no-repeat center center;height:41px;width:161px;}
 header a{display:block;font-size:16px;padding:10px 12px;width:75px;text-align:center;text-decoration:none;}
 header a,header a:visited{color:#444;}
