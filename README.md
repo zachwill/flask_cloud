@@ -98,11 +98,14 @@ First, you'll need to clone the repo.
     $ git clone git@github.com:zachwill/flask-cloud.git
     $ cd flask-cloud
 
-Second, let's setup an isolated environment with `virtualenv` and `pip`
--- which you can install with the following.
+Second, let's download `pip`, `virtualenv`, and the DotCloud CLI.
 
     $ sudo easy_install pip
     $ pip install virtualenv
+    $ pip install dotcloud
+
+Now, you can setup an isolated environment with `virtualenv`.
+
     $ virtualenv --no-site-packages env
     $ source env/bin/activate
 
