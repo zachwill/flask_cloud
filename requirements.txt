@@ -10,6 +10,7 @@ flask-wtf==0.5.2
 mock
 
 # ----------------------
-# Production Environment
+# Database
 # ----------------------
-# gevent
+sqlalchemy
+flask-sqlalchemy
