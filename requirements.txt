@@ -4,13 +4,21 @@
 flask==0.7.2
 flask-wtf==0.5.2
 
+
 # ----------------------
 # Testing
 # ----------------------
 mock
+
 
 # ----------------------
 # Database
 # ----------------------
 sqlalchemy
 flask-sqlalchemy
+
+
+# ----------------------
+# Alternative Hosting
+# ----------------------
+# gevent
