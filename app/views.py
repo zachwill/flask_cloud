@@ -1,19 +1,20 @@
 """
-Flask Module Docs:  http://flask.pocoo.org/docs/api/#flask.Module
+Flask Blueprint Docs:  http://flask.pocoo.org/docs/api/#flask.Blueprint
 
 This file is used for both the routing and logic of your
 application.
 """
 
-from flask import Module, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for
 
-views = Module(__name__, 'views')
+views = Blueprint('views', __name__, static_folder='../static',
+                  template_folder='../templates')
 
 
 @views.route('/')
 def index():
     """Render website's index page."""
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 @views.route('/about/')
@@ -39,8 +40,12 @@ def qunit():
 
 @views.after_request
 def add_header(response):
-    """Add header to force latest IE rendering engine and Chrome Frame."""
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
     response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+    response.headers['Cache-Control'] = 'public, max-age=600'
     return response
 
 

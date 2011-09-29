@@ -13,9 +13,10 @@ import settings
 
 def create_app():
     """Create your application."""
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='../static',
+                template_folder='../templates')
     app.config.from_object(settings)
-    app.register_module(views)
+    app.register_blueprint(views)
     return app
 
 
