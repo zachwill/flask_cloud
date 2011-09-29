@@ -62,10 +62,9 @@ What is this?
 
 A template to get your [Flask](http://flask.pocoo.org/) app running on
 [DotCloud](https://www.dotcloud.com/) as fast as possible. For added
-convenience, the templates use [`HTML5
-Boilerplate`](https://github.com/paulirish/html5-boilerplate), and the
-[`formalize`](http://formalize.me/) project's JavaScript and CSS is also
-included to help make your forms more aesthetically pleasing.
+convenience, the templates use [Twitter's Bootstrap CSS
+framework](http://twitter.github.com/bootstrap/) to help you, as a
+developer, go from an idea to a working site.
 
 All of the CSS stylesheets are written using the [Less
 CSS](http://lesscss.org/) syntax, since I rarely write out my
@@ -86,7 +85,7 @@ going forward, while also staying minimal in size and complexity.
 
 As an added bonus, while this repo does cater to DotCloud's hosting
 service, the `bootstrap.py` file was created to help others clone this
-repo and use Flask with other hosting providers (such as Amazon and
+repo and use Flask with other hosting providers (such as Amazon, Heroku, and
 Rackspace).
 
 
