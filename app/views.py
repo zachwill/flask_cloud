@@ -12,8 +12,8 @@ views = Blueprint('views', __name__, static_folder='../static',
 
 
 @views.route('/')
-def index():
-    """Render website's index page."""
+def home():
+    """Render website's home page."""
     return render_template('home.html')
 
 
@@ -45,7 +45,7 @@ def add_header(response):
     and also to cache the rendered page for 10 minutes.
     """
     response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    response.headers['Cache-Control'] = 'public, max-age=300'
+    response.headers['Cache-Control'] = 'public, max-age=600'
     return response
 
 
