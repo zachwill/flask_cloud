@@ -67,11 +67,16 @@ framework](http://twitter.github.com/bootstrap/) to help you, as a
 developer, go from an idea to a working site.
 
 All of the CSS stylesheets are written using the [Less
-CSS](http://lesscss.org/) syntax, since I rarely write out my
-stylesheets using vanilla CSS anymore -- seriously, who wants to work in
-"language" that doesn't support variables? If you're using Mac OS X for
+CSS](http://lesscss.org/) syntax. If you're using Mac OS X for
 development, make sure to check out [incident57's
 Less.app](http://incident57.com/less/).
+
+Alternatively, there's a Less binary compiler that works similarly on
+the commandline, or you can always use the [`less.js`
+script](https://raw.github.com/cloudhead/less.js/master/dist/less-1.1.4.js)
+in your website otherwise -- it's incredibly fast. For instance, if you
+visit the [Less CSS site](http://lesscss.org), notice that it doesn't link to any CSS
+files.
 
 
 Why should I use this?
@@ -117,6 +122,10 @@ Now, you can run the application locally.
 
     $ python bootstrap.py
 
+You can easily specify which port you'd like to run your application on, too:
+
+    $ python bootstrap.py 5555
+
 To upload your application to DotCloud, you'll first need to do the
 following:
 
@@ -141,6 +150,13 @@ need to update the `requirements.txt` file. One way that this can be
 done is with `pip freeze`.
 
     $ pip freeze > requirements.txt
+
+
+Rather Use Heroku?
+------------------
+
+If you'd rather use Heroku for hosting, I've authored a near exact
+[boilerplate skeleton](http://github.com/zachwill/flask_heroku), as well.
 
 
 Other Hosting Environments
